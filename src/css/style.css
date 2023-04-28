@@ -1,0 +1,100 @@
+@media screen {
+    #outer{
+        width: screen width - 40;
+    }
+    #inner{
+        margin: 5% auto;
+        width: 500px;
+    }
+}
+body{
+    background: linear-gradient(to right, #333399, #ff00cc);
+}
+
+.container{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 100px silver;
+    border-radius: 40px;
+    transition: all 0.1s;
+}
+.container:hover{
+    box-shadow: 0px 0px 100px gold;
+}
+.container img {
+    margin: 0;
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    border-radius: 40px;
+    
+    }
+.card_number{
+    color: #fff;
+    position: relative;
+    padding-top: 30px;
+    padding-left: 50px;
+    font-weight: bold;
+    font-size: 30px;
+    }
+
+.p{
+    display: inline-block;
+    color: #fff;
+    position: relative;
+    padding-top: 100px;
+    margin-right: 60px;
+    font-weight: bold;
+    font-size: 25px;
+}
+.input-card-number{
+    width: 60%;
+    border: none;
+    outline: none;
+    height: 50px;
+    background: rgba(255, 255, 255, .3);
+    padding-left: 50px;
+    border-radius: 100px;
+    transition: background 1s;
+    color: black;
+    display: inline-block;
+    font-weight: bold;
+}
+.input-card-number:hover{
+    background: rgba(255, 255, 255, .1);
+}
+::placeholder{
+    color: black;
+    font-weight: bold;
+}
+.button-buy{
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 50px;
+    background: rgba(255, 255, 255, .3);
+    border-radius: 100px;
+    transition: background 1s;
+    color: black;
+    display: inline-block;
+    font-weight: bold;
+}
+.button-buy:hover{
+    background: rgba(255, 255, 255, .1);
+}
+.input-card-select{
+    width: 49%;
+    border: none;
+    outline: none;
+    height: 50px;
+    background: rgba(255, 255, 255, .3);
+    padding-left: 50px;
+    border-radius: 100px;
+    transition: background 1s;
+    display: inline-block;
+    font-weight: bold;
+}
+.input-card-select:hover{
+    background: rgba(255, 255, 255, .1);
+}

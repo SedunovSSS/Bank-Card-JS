@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Card</title>
+</head>
+<body>
+    <script src="src/js/index.js"></script>
+    <script>
+        function mounth_year(){
+            var mounth = document.getElementById('mounth');
+            var year = document.getElementById('year');
+            document.getElementById('date-card').innerHTML = mounth.value + '/' + year.value.substring(2, 4);
+        }
+
+        function blur(){
+            if (document.getElementById('check').checked){
+                document.getElementById('block-card').setAttribute('style', 'filter: blur(10px)');
+            }
+            else{
+                document.getElementById('block-card').setAttribute('style', 'filter: none');
+            }
+        }
+    </script>
+    <div id="outer">
+        <div id="inner">
+            <div class="container" id="block-card">
+            <img class="image" src="src/images/image.jpg">
+            <div style="display: inline;">
+            <p class="card_number" style="display: inline-block;" id="image-card">0000000000000000</p>
+            <p class="card_number" style="display: inline-block; font-size: 20px; padding-left: 20px;" id="op-card">NONE</p>
+            </div>
+            <div style="display: inline; padding-left: 50px;">
+            <p class="p">V. PUTIN</p>
+            <p class="p" id="date-card">00/00</p>
+            <p class="p" id="image-cvv">000</p>
+            </div>
+            </div>
+            <br><br>
+            <div style="display: inline;">
+                <input type="checkbox" value="" id="check" onclick="
+                    if (document.getElementById('check').checked){
+                        document.getElementById('block-card').setAttribute('style', 'filter: blur(10px)');
+                    }
+                    else{
+                        document.getElementById('block-card').setAttribute('style', 'filter: none');
+                    }">
+                <label style="color: white;">Скрыть реквизиты</label><br><br>
+                <h1 style="color: white;">Цена - 1000$</h1>
+            <input type="text" placeholder="Номер карты" class="input-card-number" maxlength="16" id="card" min="0" onchange="changeCard()" >
+            <input type="text" placeholder="CVV" class="input-card-number" maxlength="3" min="0" id="cvv" style="width: 17%;" onchange="changeCVV()"><br><br>
+            <select class="input-card-select" onchange="
+            var mounth = document.getElementById('mounth');
+            var year = document.getElementById('year');
+            document.getElementById('date-card').innerHTML = mounth.value + '/' + year.value.substring(2, 4);
+            " id="mounth">
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <select class="input-card-select" onchange="
+            var mounth = document.getElementById('mounth');
+            var year = document.getElementById('year');
+            document.getElementById('date-card').innerHTML = mounth.value + '/' + year.value.substring(2, 4);
+            " id="year">
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+                <option value="2031">2031</option>
+                <option value="2032">2032</option>
+            </select>
+        </div><br><br>
+            <button type="button" class="button-buy">КУПИТЬ</button><br><br>
+        </div>
+    </div>
+
+</body>
+</html>
