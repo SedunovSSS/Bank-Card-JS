@@ -9,22 +9,6 @@
 </head>
 <body>
     <script src="src/js/index.js"></script>
-    <script>
-        function mounth_year(){
-            var mounth = document.getElementById('mounth');
-            var year = document.getElementById('year');
-            document.getElementById('date-card').innerHTML = mounth.value + '/' + year.value.substring(2, 4);
-        }
-
-        function blur(){
-            if (document.getElementById('check').checked){
-                document.getElementById('block-card').setAttribute('style', 'filter: blur(10px)');
-            }
-            else{
-                document.getElementById('block-card').setAttribute('style', 'filter: none');
-            }
-        }
-    </script>
     <div id="outer">
         <div id="inner">
             <div class="container" id="block-card">
